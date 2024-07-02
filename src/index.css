@@ -8,3 +8,14 @@
   font-variation-settings:
     "slnt" 0;
 }
+
+body {
+  font-size: 16px;
+}
+
+.stroke-custom {
+  path {
+    stroke-width: 2px;
+    fill: "#2657A4"
+  }
+}

@@ -9,6 +9,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import Service from "./Service";
+import { motion } from "framer-motion";
 
 export default function ServicesSection() {
   const services = [
@@ -60,12 +61,12 @@ export default function ServicesSection() {
       >
         <Hide below="md">
           <Center h={"100%"} boxSize={{ base: "xl", lg: "xl" }}>
-            <Image src="/services.svg" alt="Hero Image" />
+            <Image as={motion.img} initial={{x : -500, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={'0.2fs linear'} viewport={{once: true}} src="/services.svg" alt="Hero Image" />
           </Center>
         </Hide>
         <Box>
           <VStack gap={"6"}>
-            <Heading fontSize={"30px"}>
+            <Heading as={motion.h1} initial={{y : 50, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition='0.5s linear' viewport={{once: true}} fontSize={{ base: "33px", lg:"44px"}}>
               It's very helpful for operating system
             </Heading>
             <Spacer />

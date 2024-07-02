@@ -10,11 +10,13 @@ import {
     Hide,
     Center,
   } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
     <GridItem w="100%">
     <Grid
+   
       templateColumns={{ base: "1fr",lg: "repeat(2, 1fr)" }}
       h={{md: "50", lg:"100%"}}
       transitionDelay="0s, 0s, 0s, 0s"
@@ -42,13 +44,15 @@ export default function Hero() {
       <Box
         p={{ base: "1rem",md: '0.5rem' ,lg: "2rem 4rem" }}
         order={{ md: "1", lg: "0" }}
+        as={motion.div}
+        viewport={{ once: true }} initial={{y : 300, opacity: 0, }} whileInView={{y: 0, opacity: 1}} transition={'0.2s linear'}
       >
         <Heading
           fontSize={"3.2rem"}
           fontWeight={"700"}
           maxWidth={{ xl: "90%" }}
           textAlign={{ base: "center", lg: "left" }}
-          lineHeight={{ base: "60px", lg: "70px" }}
+          lineHeight={{ base: "60px", lg: "62px" }}
         >
           Codext one of the best system in{" "}
           <Highlight query={"saas"} styles={{ color: "#2657A4" }}>
@@ -89,7 +93,7 @@ export default function Hero() {
       <Hide below="md">
         <Center>
           <Box boxSize={{ base: "xl", lg: "xl" }}>
-            <Image src="/hero.svg" alt="Hero Image" />
+            <Image as={motion.img} viewport={{ once: true }} initial={{x : 500, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={'0.2s linear'} src="/hero.svg" alt="Hero Image" />
           </Box>
         </Center>
       </Hide>
