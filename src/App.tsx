@@ -6,6 +6,7 @@ import {
 import HeroSection from "./components/HeroSection";
 import ServicesSection from "./components/ServicesSection";
 import FeaturesSection from "./components/FeaturesSection";
+import PricingSection from "./components/PricingSection";
 
 function App() {
   const manager = createLocalStorageManager("my-key");
@@ -16,6 +17,7 @@ function App() {
         <HeroSection/>
         <ServicesSection/>
         <FeaturesSection/>
+        <PricingSection/>
       </Box>
     </ChakraProvider>
   );

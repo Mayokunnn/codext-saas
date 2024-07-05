@@ -6,6 +6,7 @@ import {
   Hide,
   Image,
   Spacer,
+  Stack,
   VStack,
 } from "@chakra-ui/react";
 import Service from "./Service";
@@ -33,7 +34,8 @@ export default function ServicesSection() {
     },
   ];
   return (
-    <Box w="100%" pt="1rem" px={{ sm: "1rem" }} h={"100vh"}>
+    <Box  w="100%" pt="1rem" px={{ sm: "1rem" }}  h={ {base: "100%", md:"100vh"}}
+    pb={'2rem'}>
       <Grid
         templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}
         h={{ base: "100%", md: "40%", lg: "100%" }}
@@ -47,10 +49,11 @@ export default function ServicesSection() {
         mx="auto"
         px={{
           base: "15px",
-          md: "4.5rem ",
+          md: "1px ",
+          
         }}
         pt={{ base: "2rem", md: "0.5rem" }}
-        gap={{ lg: "10" }}
+        gap={{ lg: "2", xl: '4' }}
         w={{
           base: "calc(100vw - 6%)",
           md: "calc(100vw - 8%)",
@@ -60,9 +63,11 @@ export default function ServicesSection() {
         }}
       >
         <Hide below="md">
-          <Center h={"100%"} boxSize={{ base: "xl", lg: "xl" }}>
-            <Image as={motion.img} initial={{x : -500, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={'0.2fs linear'} viewport={{once: true}} src="/services.svg" alt="Hero Image" />
-          </Center>
+          <Stack alignItems={"center"}>
+            <Center h={"100%"} w="100%" boxSize={"xl"}>
+              <Image as={motion.img} initial={{x : -500, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={'0.2fs linear'} viewport={{once: true}} src="/services.svg" alt="Hero Image" />
+            </Center>
+          </Stack>
         </Hide>
         <Box>
           <VStack gap={"6"}>

@@ -38,7 +38,7 @@ export default function FeaturesSection() {
     }
   ]
   return (
-    <Box w="100%" py={{base: "1rem",lg:"3rem"}} px={{ sm: "1rem", lg: "2rem" }} h={"100vh"}>
+    <Box w="100%" py={{base: "1rem",lg:"5rem"}} px={{ sm: "1rem", lg: "2rem" }} h={ {base: "100%", lg:"100vh"}}>
       <Grid
         h="100%"
         templateRows={"200px 1fr"}

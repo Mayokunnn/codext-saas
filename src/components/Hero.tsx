@@ -24,11 +24,10 @@ export default function Hero() {
       transition-property="box-shadow, background-color, filter, border"
       transitionTimingFunction="linear, linear, linear, linear"
       justifyContent={{ lg: "center" }}
-      lineHeight="25.6px"
       mx="auto"
       px={{
         base: "15px",
-        md: "10px",
+        md: "1px",
       }}
       pt={{
         lg: "1rem",
@@ -36,23 +35,22 @@ export default function Hero() {
       w={{
         base: "calc(100vw - 6%)",
         md: "calc(100vw - 8%)",
-        lg: "calc(100vw - 6%)",
+        lg: "calc(100vw - %)",
         xl: "calc(100vw - 350px)",
         "2xl": "calc(100vw - 365px)",
       }}
     >
       <Box
-        p={{ base: "1rem",md: '0.5rem' ,lg: "2rem 4rem" }}
+        p={{ base: "0rem",md: '0.5rem' ,lg: "2rem" }}
         order={{ md: "1", lg: "0" }}
         as={motion.div}
-        viewport={{ once: true }} initial={{y : 300, opacity: 0, }} whileInView={{y: 0, opacity: 1}} transition={'0.2s linear'}
+        viewport={{ once: true }} initial={{y : 200, opacity: 0, }} whileInView={{y: 0, opacity: 1}} transition={'0.2s linear'}
       >
         <Heading
-          fontSize={"3.2rem"}
+          fontSize={{lg:"3.2rem" , base: "2.5rem"}}
           fontWeight={"700"}
-          maxWidth={{ xl: "90%" }}
           textAlign={{ base: "center", lg: "left" }}
-          lineHeight={{ base: "60px", lg: "62px" }}
+          lineHeight={{ base: "50px", lg: "52px" }}
         >
           Codext one of the best system in{" "}
           <Highlight query={"saas"} styles={{ color: "#2657A4" }}>
@@ -61,7 +59,7 @@ export default function Hero() {
         </Heading>
         <Text
           fontSize={{ base: "13px", lg: "15px" }}
-          lineHeight="20.6px"
+          lineHeight={{lg:"20.6px"}}
           maxWidth={{ lg: "80%" }}
           textAlign={{ base: "center", lg: "left" }}
           my={{ base: "12px", lg: "18px" }}

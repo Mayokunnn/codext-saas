@@ -27,10 +27,10 @@ export default function Service({ services }: Props) {
           alignItems={"start"}
           justifyContent={'start'}
         >
-          <IoArrowRedo size={'50px'} color={service.color} />
+          <IoArrowRedo size={'45px'} color={service.color} />
           <VStack alignItems={"left"}>
             <Heading fontSize={{ base: "20px",lg:"25px"}}>{service.heading}</Heading>
-            <Text fontSize={{ base: "12px",lg:"14px"}} color={"#92959A"}>
+            <Text fontSize={{ base: "15px",lg:"14px"}} color={"#92959A"}>
               {service.description}
             </Text>
           </VStack>
